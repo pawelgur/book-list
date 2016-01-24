@@ -14,7 +14,8 @@ define([
     },
     
     initialize: function() {
-      this.listenTo(bb, 'bookService:booksGenerated', this.render.bind(this));
+      this.listenTo(bb, 'app:booksGenerated', this.render.bind(this));
+      this.listenTo(bb, 'bookService:generated', this.updateGeneratedCount.bind(this));      
     },
     
     render: function() {
@@ -22,7 +23,12 @@ define([
     },  
     
     renderGenerating: function() {
-      this.$el.html('generating books...'); 
+      this.$el.html('generating books... <span class="generated-count">0</span>'); 
+      this.$count = this.$('.generated-count');
+    },
+    
+    updateGeneratedCount: function(count) {
+      this.$count.html(count);
     },
     
     onGenerateBooksClick: function() {

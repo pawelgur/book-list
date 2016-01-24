@@ -10,7 +10,9 @@ define([
   var genreItems = getGenreItems();
     
   /**
-   * Shows list of books with possibility to filter and sort
+   * Shows list of books with possibility to filter and sort.
+   * 
+   * Simple VirtualList library is used (there might be better ones, didn't invest much time in search)
    */
   var ListView = bb.View.extend({
     

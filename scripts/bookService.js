@@ -1,12 +1,13 @@
 define([
+  'backbone',
   'jquery',
   'underscore',
   'chance' 
-], function($, _, Chance) {
+], function(bb, $, _, Chance) {
   
   var chance = new Chance();
   
-  var CHUNK_SIZE = 5000;
+  var CHUNK_SIZE = 1000;
   var genders = ['male', 'female'];
   var genres = ['action', 'drama', 'novel', 'fantasy', 'horror', 'finance'];  
   
@@ -14,6 +15,8 @@ define([
   
   /**
    * Main service for book list related buisness logic
+   * 
+   * Webworkers could also be used as another solution for main methods.
    */
   var bookService = {
     
@@ -31,6 +34,7 @@ define([
           books.push(bookService.generateBook(i));
         }
         generatedCount = books.length;
+        bb.trigger('bookService:generated', generatedCount);
         if (generatedCount >= count) {
           generatingBooks.resolve(books);
           return;

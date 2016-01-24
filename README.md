@@ -3,11 +3,11 @@ Simple app showing list of 1 000 000 books with sort and filter possibilities
 
 ## Installation
 
-In order to run this project you need to install `node.js` and `bower` on your system.
+In order to run this project you need to install `node.js` (npm) and `bower` on your system.
 
 After doing that in project directory run these commands in your terminal:
 
-` node install `
+` npm install `
 
 and
 

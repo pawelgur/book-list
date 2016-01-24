@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+.books-list {
+  position: relative;
+}
+.books-list .list-header,
+.books-list .vrow {
+  width: 100%;
+  display: table;
+}
+.books-list .list-body {
+  width: 100%;
+  height: 500px;
+}
+.books-list .cell {
+  display: table-cell;
+}
+.books-list .cell.name {
+  width: 20%;
+}
+.books-list .cell.genre {
+  width: 20%;
+}
+.books-list .cell.date {
+  width: 20%;
+}
+.books-list .cell.author-name {
+  width: 20%;
+}
+.books-list .cell.author-gender {
+  width: 20%;
+}
+.books-list .loading-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.books-list .form-group {
+  padding: 5px;
+}
+.books-list .horror-on-halloween {
+  background-color: red;
+  color: yellow;
+}
+.books-list .finance-on-friday {
+  background-color: blue;
+  color: white;
+}

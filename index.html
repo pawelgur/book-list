@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Book list</title>
+    <link rel="stylesheet" href="styles.css">
+    <script data-main="scripts/main.js" src="bower_components/requirejs/require.js"></script>
+  </head>
+  <body>
+   	<h1>Book list</h1>   	
+   	
+   	<div class="main-container"></div>
+    
+    
+   	
+   	<script id="generate-template" type="text/x-handlebars-template">   	
+    
+   		<button class="generate-books" type="button">Generate books</button>   	
+      	
+   	</script>
+   	
+   	<script id="list-template" type="text/x-handlebars-template">
+   	
+   		<div class='list-header'>
+        <div class="cell name">Name</div>
+        <div class="cell genre">Genre</div>
+        <div class="cell date">Date</div>
+        <div class="cell author-name">Author name</div>
+        <div class="cell author-gender">Author gender</div>
+      </div>
+      <div class="list-body"></div>
+      <div class="list-footer">
+        <div class="form-group">
+          <span>Book count: <span class="item-count">0</span></span> 
+          <span class="horror-on-halloween">horror on halloween</span> 
+          <span class="finance-on-friday">finance on last friday</span>
+        </div>
+      </div>
+   		
+   	</script>
+    
+    <script id="row-template" type="text/x-handlebars-template">  
+        
+        <div class="cell name">{{name}}</div>
+        <div class="cell genre">{{genre}}</div>
+        <div class="cell date">{{prettyDate date}}</div>
+        <div class="cell author-name">{{author.name}}</div>
+        <div class="cell author-gender">{{author.gender}}</div>
+        
+    </script>   
+    
+    <script id="select-template" type="text/x-handlebars-template">
+    
+      <div class="form-group {{name}}">
+        <label for="{{name}}">{{label}}</label>
+        <select name="{{name}}" id="{{name}}">
+          {{#each items}}
+            <option value="{{value}}">{{label}}</option>
+          {{/each}}
+        </select>
+      </div>
+    
+    </script>	
+   	
+  </body>
+</html>

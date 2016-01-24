@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.books-list {
+  position: relative;
+  
+  .list-header,
+  .vrow {
+    width: 100%;
+    display: table;
+  }
+  
+  .list-body{
+    width: 100%;
+    height: 500px;
+  }
+  
+  .cell {
+    display: table-cell;    
+    
+    &.name {
+      width: 20%;
+    }
+    &.genre {
+      width: 20%;
+    }
+    &.date {
+      width: 20%;
+    }
+    &.author-name {
+      width: 20%;
+    }
+    &.author-gender {
+      width: 20%;
+    }
+  }
+  
+  .loading-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .form-group {
+    padding: 5px;
+  }
+  
+  .horror-on-halloween {
+    background-color: red;
+    color: yellow;
+  }
+  .finance-on-friday {
+    background-color: blue;
+    color: white;
+  }
+}
